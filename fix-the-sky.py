@@ -52,7 +52,7 @@ def main():
 
   im = array_fromim('crops\\sky_bad.png')
 
-  for _ in range(40):
+  for _ in range(100):
     print('iter',_)
     mask = mask_bad(im)
     em = edge_mask(mask)
@@ -64,7 +64,8 @@ def main():
     #plt.pause(0.05)
 
   ### Some outputs
-  Image.fromarray(im).save('im_post.png')
+  fname = 'im_post_random.png'
+  Image.fromarray(im).save(fname)
 
   #mask = mask.astype('uint8')
   #mask[mask>0] = 255
